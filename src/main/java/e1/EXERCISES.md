@@ -67,12 +67,6 @@ Using a **mocked** `ChatModel` (e.g., with Mockito), verify the following scenar
 
 These are open-ended tasks for further exploration and experimentation.
 
-- **Inventory system:**
-  Add a `List<String> inventory` field to `Player` and update the prompt templates so the LLM is
-  aware of the player's items. The LLM can then offer choices that depend on held items
-  (e.g., "Use the healing potion" only appears if the player has one). Think about how the
-  `StoryResponse` should communicate inventory changes back to the caller.
-
 - **Story memory / context window:**
   LLM calls are stateless — each request is independent. Create a `ContextPrompt` (or a
   prompt decorator) that appends a summary of previous beats to the current prompt, giving the
