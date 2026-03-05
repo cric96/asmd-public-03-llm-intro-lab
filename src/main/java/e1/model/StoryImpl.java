@@ -12,14 +12,12 @@ import java.util.Objects;
 public final class StoryImpl implements Story {
 
     private final StoryEngine engine;
-    private final String setting;
     private Player player;
     private StoryResponse currentBeat;
 
     public StoryImpl(StoryEngine engine, Player initialPlayer, String setting) {
         this.engine = Objects.requireNonNull(engine);
         this.player = Objects.requireNonNull(initialPlayer);
-        this.setting = Objects.requireNonNull(setting);
         this.currentBeat = engine.request(new BeginPrompt(initialPlayer, setting));
         this.player = currentBeat.updatedPlayer();
     }
@@ -54,7 +52,7 @@ public final class StoryImpl implements Story {
         final List<String> available = currentBeat.choices();
         if (decision < 0 || decision >= available.size()) {
             throw new IllegalArgumentException(
-                    "Invalid choice: " + decision + " (valid: 0.." + (available.size() - 1) + ")"
+                "Invalid choice: " + decision + " (valid: 0.." + (available.size() - 1) + ")"
             );
         }
         final String chosen = available.get(decision);

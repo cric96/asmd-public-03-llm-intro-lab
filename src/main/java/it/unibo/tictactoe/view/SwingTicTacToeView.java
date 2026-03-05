@@ -3,15 +3,8 @@ package it.unibo.tictactoe.view;
 import it.unibo.tictactoe.model.Board;
 import it.unibo.tictactoe.model.Player;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.IntStream;

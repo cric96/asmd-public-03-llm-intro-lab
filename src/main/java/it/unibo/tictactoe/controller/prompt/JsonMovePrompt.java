@@ -7,7 +7,8 @@ import it.unibo.tictactoe.model.Player;
 
 import java.util.Objects;
 
-import static it.unibo.tictactoe.model.GameConstants.*;
+import static it.unibo.tictactoe.model.GameConstants.BOARD_SIZE;
+import static it.unibo.tictactoe.model.GameConstants.EMPTY_CELL_SYMBOL;
 
 public final class JsonMovePrompt implements TicTacToePrompt {
 

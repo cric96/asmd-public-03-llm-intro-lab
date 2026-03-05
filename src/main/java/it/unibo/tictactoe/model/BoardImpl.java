@@ -1,16 +1,10 @@
 package it.unibo.tictactoe.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.List;
 import java.util.stream.IntStream;
 
-import static it.unibo.tictactoe.model.GameConstants.BOARD_SIZE;
-import static it.unibo.tictactoe.model.GameConstants.EMPTY_CELL_SYMBOL;
-import static it.unibo.tictactoe.model.GameConstants.SEPARATOR_LENGTH;
+import static it.unibo.tictactoe.model.GameConstants.*;
 
 /**
  * List-based implementation of {@link Board}.

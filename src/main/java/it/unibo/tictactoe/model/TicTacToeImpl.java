@@ -2,11 +2,7 @@ package it.unibo.tictactoe.model;
 
 import it.unibo.utils.Pair;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.IntStream;
 
 import static it.unibo.tictactoe.model.GameConstants.BOARD_SIZE;

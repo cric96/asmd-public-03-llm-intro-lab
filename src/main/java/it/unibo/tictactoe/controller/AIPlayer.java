@@ -1,7 +1,6 @@
 package it.unibo.tictactoe.controller;
 
 import dev.langchain4j.model.chat.ChatModel;
-import it.unibo.tictactoe.controller.formatter.BoardFormatter;
 import it.unibo.tictactoe.controller.parser.GsonMoveParser;
 import it.unibo.tictactoe.controller.parser.MoveParser;
 import it.unibo.tictactoe.controller.prompt.JsonMovePrompt;
@@ -19,7 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
-import static it.unibo.tictactoe.model.GameConstants.*;
+import static it.unibo.tictactoe.model.GameConstants.BOARD_SIZE;
 
 /**
  * AI player that uses an LLM (via LangChain4j) to decide its moves.
@@ -42,9 +41,6 @@ public class AIPlayer implements PlayerLogic {
     private final MoveParser parser;
     private final ExecutorService executor;
 
-    /**
-     * Full constructor — inject all collaborators.
-     */
     public AIPlayer(ChatModel model, TicTacToePrompt prompt, MoveParser parser) {
         this.model = Objects.requireNonNull(model);
         this.prompt = Objects.requireNonNull(prompt);
@@ -52,9 +48,6 @@ public class AIPlayer implements PlayerLogic {
         this.executor = Executors.newVirtualThreadPerTaskExecutor();
     }
 
-    /**
-     * Convenience constructor — defaults to Gson-based prompt and parser.
-     */
     public AIPlayer(ChatModel model, Player aiPlayer) {
         this(model, new JsonMovePrompt(aiPlayer), new GsonMoveParser());
     }

@@ -1,8 +1,8 @@
 package it.unibo.prompt.few;
 
-import it.unibo.utils.LlmConstants;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
+import it.unibo.utils.LlmConstants;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ public class FewShotAgentExample {
             .numPredict(LlmConstants.MAX_PREDICT_TOKENS)
             .build();
         final var examples = List.of(
-                FewShotAgent.QuestionAnswer.from("Hi there!", "OK"),
-                FewShotAgent.QuestionAnswer.from("You won a free vacation!", "SPAM"),
-                FewShotAgent.QuestionAnswer.from("Urgent: Claim your prize now!", "SPAM")
+            FewShotAgent.QuestionAnswer.from("Hi there!", "OK"),
+            FewShotAgent.QuestionAnswer.from("You won a free vacation!", "SPAM"),
+            FewShotAgent.QuestionAnswer.from("Urgent: Claim your prize now!", "SPAM")
         );
         final var agent = new FewShotAgent(model, examples);
         final var query = """

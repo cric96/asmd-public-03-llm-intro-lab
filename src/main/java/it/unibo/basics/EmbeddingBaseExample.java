@@ -1,12 +1,11 @@
 package it.unibo.basics;
 
-import it.unibo.utils.LlmConstants;
 import dev.langchain4j.model.embedding.DimensionAwareEmbeddingModel;
 import dev.langchain4j.model.ollama.OllamaEmbeddingModel;
+import it.unibo.utils.LlmConstants;
 import it.unibo.utils.Vector;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public class EmbeddingBaseExample {
     public static void main(String[] args) {

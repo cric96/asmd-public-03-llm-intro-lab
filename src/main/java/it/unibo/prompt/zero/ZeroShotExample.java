@@ -1,8 +1,8 @@
 package it.unibo.prompt.zero;
 
-import it.unibo.utils.LlmConstants;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
+import it.unibo.utils.LlmConstants;
 
 public class ZeroShotExample {
     public static void main(String[] args) {

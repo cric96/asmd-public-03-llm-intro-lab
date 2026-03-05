@@ -1,9 +1,9 @@
 package it.unibo.basics;
 
-import it.unibo.utils.LlmConstants;
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
+import it.unibo.utils.LlmConstants;
 
 public class TextGenerationExample {
     public static void main(String[] args) {
